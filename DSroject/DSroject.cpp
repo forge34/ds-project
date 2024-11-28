@@ -2,12 +2,15 @@
 //
 
 #include <iostream>
-#include "Patient.h"
-
-
+#include "LinkedList.h"
 
 int main()
 {
-    Patient p;
-    p.hello();
+	LinkedList<char> ll;
+	ll.insert_first(1);
+	ll.insert_first(2);
+	ll.insert_first(2);
+	ll.insert_first(2);
+
+	std::cout << ll.count();
 }

@@ -1,5 +1,6 @@
-#pragma once
-class Node
-{
+template <class T>
+class Node {
+public:
+    T data;
+    Node<T>* next;
 };
-
