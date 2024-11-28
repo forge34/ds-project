@@ -3,14 +3,21 @@
 
 #include <iostream>
 #include "LinkedList.h"
+#include "Branch.h"
 
 int main()
 {
-	LinkedList<char> ll;
-	ll.insert_first(1);
-	ll.insert_first(2);
-	ll.insert_first(2);
-	ll.insert_first(2);
+	LinkedList<Branch> ll;
 
-	std::cout << ll.count();
+	Branch b;
+	b.set_id("123");
+	b.set_name("132312");
+	b.set_Location("dak");
+
+	ll.insert_first(b);
+
+	std::cout << ll.count() << endl;
+	std::cout << b.get_Location() << endl;
+	std::cout << b.get_name() << endl;
+	std::cout << b.get_id() << endl;
 }

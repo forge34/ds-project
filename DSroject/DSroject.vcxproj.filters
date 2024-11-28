@@ -18,9 +18,6 @@
     <ClCompile Include="DSroject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Branch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Patient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

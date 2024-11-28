@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Branch.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="DSroject.cpp" />
     <ClCompile Include="Patient.cpp" />
