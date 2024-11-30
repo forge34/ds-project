@@ -7,3 +7,7 @@ class Patient
 public:
 	void hello();
 };
+
+void Patient::hello() {
+	std::cout << " Hello";
+}

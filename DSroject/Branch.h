@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 using namespace std;
 
@@ -31,7 +32,7 @@ void Branch::set_name(string new_name)
     this->name = new_name;
 }
 
-string  Branch::get_name()
+string Branch::get_name()
 {
     return this->name;
 }

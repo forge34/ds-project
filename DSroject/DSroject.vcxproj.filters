@@ -18,12 +18,6 @@
     <ClCompile Include="DSroject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Patient.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Doctor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Branch.h">
@@ -39,6 +33,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BranchManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

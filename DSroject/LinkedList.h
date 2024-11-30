@@ -2,6 +2,8 @@
 #include "Node.h"
 #include <iostream>
 
+using namespace std;
+
 template <class T>
 class LinkedList
 {
@@ -31,13 +33,9 @@ void LinkedList<T>::insert_first(T data)
     Node<T>* newnode = new Node<T>;
     newnode->data = data;
     if (this->is_empty()) {
-
-        newnode->next = NULL;
         this->head = newnode;
     }
     else {
-
-
         newnode->next = this->head;
         this->head = newnode;
     }
