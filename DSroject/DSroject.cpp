@@ -5,27 +5,24 @@
 #include "LinkedList.h"
 #include "Branch.h"
 #include "BranchManager.h"
+#include "Doctor.h"
+#include "DoctorManager.h"
 
 int main()
 {
-	BranchManager BM;
+	DoctorManager DM;
 
-	Branch b;
-	b.set_id("123");
-	b.set_name("MO-01");
-	b.set_Location("Egypt");
+	Doctor d1, d2;
+	d1.set_id("1");
+	d1.set_name("Sherif");
+	d1.set_spec("Neuroglosit");
 
-	Branch b2;
-	b2.set_id("123E@");
-	b2.set_name("AD-07");
-	b2.set_Location("Cairo");
-		
-	BM.insert_first(b);
-	BM.insert_first(b2);
+	d2.set_id("2");
+	d2.set_name("Omar");
+	d2.set_spec("Surgeon");
 
-	std::cout << "number of branches is : " << BM.count() << endl;
-	BM.display();
+	DM.insert_first(d1);
+	DM.insert_first(d2);
 
-	Branch found = BM.search_by_id("123");
-	cout << "Result found , name is : " << found.get_name();
+	DM.display();
 }

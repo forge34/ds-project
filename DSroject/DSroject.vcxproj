@@ -133,6 +133,7 @@
     <ClInclude Include="Branch.h" />
     <ClInclude Include="BranchManager.h" />
     <ClInclude Include="Doctor.h" />
+    <ClInclude Include="DoctorManager.h" />
     <ClInclude Include="LinkedList.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
