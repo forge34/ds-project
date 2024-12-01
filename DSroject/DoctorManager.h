@@ -8,7 +8,7 @@ class DoctorManager : public LinkedList<Doctor>
 {
 public:
     void remove_doctor(string);
-    void display();
+    void display_doctors();
    
 };
 
@@ -38,7 +38,7 @@ void DoctorManager::remove_doctor(string id)
         }
 }
 
-void DoctorManager::display() 
+void DoctorManager::display_doctors() 
     {
         Node<Doctor>* temp = this->head;
         int counter = 0;

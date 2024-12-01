@@ -24,5 +24,5 @@ int main()
 	DM.insert_first(d1);
 	DM.insert_first(d2);
 
-	DM.display();
+	DM.display_doctors();
 }
