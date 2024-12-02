@@ -12,25 +12,17 @@
 
 int main()
 {
-	PatientManager PM;
+	Branch b;
+	Doctor d;
+	Patient p;
 
-	Patient d1, d2;
-	d1.set_id("1");
-	d1.set_name("Sherif");
+	d.set_name("Mo");
+	d.set_id("1");
+	d.set_spec("Neuro");
 
-	d2.set_id("2");
-	d2.set_name("Omar");
+	p.set_name("ahmed");
+	p.set_id("1");
 
-	PM.insert_first(d1);
-	PM.insert_first(d2);
-
-	cout << PM.count() << endl;
-	Patient* p = PM.search_by_name("Sherif");
-
-	cout << p->get_id() << endl;
-
-	PM.remove_patient("2");
-
-	cout << PM.count() << endl;
-	cout << (PM.search_by_name("Omar") == NULL) << endl;
+	b.appointments->create_appointment(d, p, "6:30");
+	b.display_appointments();
 }

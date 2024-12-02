@@ -28,5 +28,13 @@ void AppointmentManager::create_appointment(Doctor d, Patient p, string time) {
 
 void AppointmentManager::display() {
 
+	Node<Appointment>* temp = head;
 
+	while (temp != NULL) {
+		cout << "Appointment doctor : " << temp->data.doctor.get_name() << endl;
+		cout << "Appointemnt patient : " << temp->data.patient.get_name() << endl;
+		cout << "Appointemnt time : " << temp->data.time << endl;
+
+		temp = temp->next;
+	}
 }
