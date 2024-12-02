@@ -12,9 +12,8 @@ class BranchManager : public LinkedList<Branch>
 {
 public:
 	Branch *search_by_id(string);
-	AppointmentManager *appointments = new AppointmentManager();
 	void display_info();
-	void display_appointments();
+
 };
 
 Branch *BranchManager::search_by_id(string id)
@@ -49,8 +48,4 @@ void BranchManager::display_info()
 		counter++;
 		temp = temp->next;
 	}
-}
-
-void BranchManager::display_appointments() {
-	this->appointments->display();
 }

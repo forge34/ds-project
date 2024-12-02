@@ -9,6 +9,8 @@ private:
     string name;
     string location;
 public:
+    AppointmentManager* appointments = new AppointmentManager();
+    void display_appointments();
     void set_name(string );
     string get_name();
     void set_id(string);
@@ -16,6 +18,11 @@ public:
     void set_Location(string);
     string get_Location();
 };
+
+
+void Branch::display_appointments() {
+    this->appointments->display();
+}
 
 void Branch::set_id(string new_id)
 {
