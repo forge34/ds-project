@@ -44,5 +44,8 @@
     <ClInclude Include="PatientManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Appointment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
