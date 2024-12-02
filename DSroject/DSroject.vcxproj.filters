@@ -47,5 +47,8 @@
     <ClInclude Include="Appointment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AppointmentManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

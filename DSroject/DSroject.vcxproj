@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Appointment.h" />
+    <ClInclude Include="AppointmentManager.h" />
     <ClInclude Include="Branch.h" />
     <ClInclude Include="BranchManager.h" />
     <ClInclude Include="Doctor.h" />
