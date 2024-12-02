@@ -8,31 +8,36 @@
 class BranchManager:public LinkedList<Branch>
 {
 public:
-	Branch search_by_id(string id) {
-		Node<Branch>* temp = this->head;
+	Branch* search_by_id(string);
 
-		while (temp != NULL) {
-			if (temp->data.get_id() == id) {
-				return (temp->data);
-			}
-			temp = temp->next;
-		}
-	}
-
-	void display() {
-		Node<Branch>* temp = this->head;
-		int counter = 0;
-
-		while (temp != NULL) {
-			cout << "information for branch #" << counter << endl;
-			cout << "name : " << temp->data.get_name() << endl;
-			cout << "id : " << temp->data.get_id() << endl;
-			cout << "location : " << temp->data.get_Location() << endl << endl;
-
-			counter++;
-			temp = temp->next;
-		}
-
-	}
-
+	void display();
 };
+
+Branch* BranchManager::search_by_id(string id) {
+	Node<Branch>* temp = this->head;
+
+	while (temp != NULL) {
+		if (temp->data.get_id() == id) {
+			Branch* data = new Branch(temp->data);
+			return data;
+		}
+		temp = temp->next;
+	}
+	return NULL;
+}
+
+void BranchManager::display() {
+	Node<Branch>* temp = this->head;
+	int counter = 0;
+
+	while (temp != NULL) {
+		cout << "information for branch #" << counter << endl;
+		cout << "name : " << temp->data.get_name() << endl;
+		cout << "id : " << temp->data.get_id() << endl;
+		cout << "location : " << temp->data.get_Location() << endl << endl;
+
+		counter++;
+		temp = temp->next;
+	}
+
+}

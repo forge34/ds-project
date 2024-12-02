@@ -6,22 +6,23 @@ using namespace std;
 class Patient
 {
 private:
-	int id;
+	string id;
 	string name;
 	string address;
 	string appointment;
 
 public:
-	void set_id(int);
+
+	void set_id(string);
 	void set_name(string);
 	void set_address(string);
 	void set_appointment(string);
-	int get_id();
+	string get_id();
 	string get_name();
 	string get_address();
 	string get_appointment();
 };
-void Patient::set_id(int id) {
+void Patient::set_id(string id) {
 	this->id = id;
 }
 void Patient::set_name(string name) {
@@ -33,7 +34,7 @@ void Patient::set_address(string address) {
 void Patient::set_appointment(string appointment) {
 	this->appointment = appointment;
 }
-int Patient::get_id() {
+string Patient::get_id() {
 	return id;
 }
 string Patient::get_name() {

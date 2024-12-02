@@ -140,6 +140,7 @@
     </ClInclude>
     <ClInclude Include="Node.h" />
     <ClInclude Include="Patient.h" />
+    <ClInclude Include="PatientManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
