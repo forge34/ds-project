@@ -10,6 +10,10 @@ public :
 	Patient patient;
 	string time;
 
+	Appointment() {
+
+	}
+
 	Appointment(Doctor,Patient,string);
 };
 
