@@ -12,8 +12,8 @@ class BranchManager : public LinkedList<Branch>
 {
 public:
 	Branch *search_by_id(string);
+	void remove_branch(string);
 	void display_info();
-
 };
 
 Branch *BranchManager::search_by_id(string id)
@@ -30,6 +30,30 @@ Branch *BranchManager::search_by_id(string id)
 		temp = temp->next;
 	}
 	return NULL;
+}
+
+void BranchManager::remove_branch(string id)
+{
+	Node<Branch> *delptr = this->head;
+
+	if (delptr->data.get_id() == id)
+	{
+		head = head->next;
+		delete delptr;
+	}
+
+	else
+	{
+		Node<Branch> *prev;
+		while (delptr != NULL && delptr->data.get_id() != id)
+		{
+			prev = delptr;
+			prev->next = delptr->next;
+			delptr = delptr->next;
+		}
+
+		delete delptr;
+	}
 }
 
 void BranchManager::display_info()
