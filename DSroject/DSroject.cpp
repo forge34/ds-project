@@ -43,8 +43,6 @@ void main_logic1() {
 	branchManager1.display_info();
 	b1.doctors->display_doctors();
 	b1.display_appointments();
-
-
 }
 
 int main()

@@ -40,7 +40,8 @@ void PatientManager::update_patient(string id, Patient new_data) {
 
     while (temp != NULL) {
         if (temp->data.get_id() == id) {
-            temp->data = Patient(temp->data);
+            temp->data = new_data;
+            cout << "patient updated" << endl;
             return;
         }
         else
