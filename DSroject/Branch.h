@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include "AppointmentManager.h"
+#include "PatientManager.h"
+#include "DoctorManager.h"
 
 using namespace std;
 
@@ -10,7 +12,10 @@ private:
     string id;
     string name;
     string location;
+
 public:
+    DoctorManager* doctors = new DoctorManager();
+    PatientManager* patients = new PatientManager();
     AppointmentManager* appointments = new AppointmentManager();
     void display_appointments();
     void set_name(string );

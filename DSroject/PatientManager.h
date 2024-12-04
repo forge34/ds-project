@@ -8,6 +8,7 @@ class PatientManager:public LinkedList<Patient>
 {
 public:
 	void remove_patient(string);
+    void update_patient(string, Patient);
 	Patient* search_by_name(string);
 };
 
@@ -31,7 +32,19 @@ void PatientManager::remove_patient(string id) {
         }
 
         delete delptr;
+    }
+}
 
+void PatientManager::update_patient(string id, Patient new_data) {
+    Node<Patient>* temp = head;
+
+    while (temp != NULL) {
+        if (temp->data.get_id() == id) {
+            temp->data = Patient(temp->data);
+            return;
+        }
+        else
+            temp = temp->next;
     }
 }
 

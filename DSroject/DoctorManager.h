@@ -43,6 +43,8 @@ void DoctorManager::display_doctors()
         Node<Doctor>* temp = this->head;
         int counter = 0;
 
+        cout << "All doctors info " << endl;
+
         while (temp != NULL) {
             cout << "information for Doctor #" << counter << endl;
             cout << "name : " << temp->data.get_name() << endl;

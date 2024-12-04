@@ -50,6 +50,7 @@ void AppointmentManager::display() {
 
 	Node<Appointment>* temp = head;
 
+	cout << "All appointments" << endl;
 	while (temp != NULL) {
 		cout << "Appointment doctor : " << temp->data.doctor.get_name() << endl;
 		cout << "Appointemnt patient : " << temp->data.patient.get_name() << endl;

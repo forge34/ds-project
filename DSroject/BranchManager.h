@@ -61,6 +61,8 @@ void BranchManager::display_info()
 	Node<Branch> *temp = this->head;
 	int counter = 0;
 
+	cout << "All branches info" << endl;
+
 	while (temp != NULL)
 	{
 		cout << "information for branch #" << counter << endl;
