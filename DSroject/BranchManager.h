@@ -24,8 +24,8 @@ Branch *BranchManager::search_by_id(string id)
 	{
 		if (temp->data.get_id() == id)
 		{
-			Branch *data = new Branch(temp->data);
-			return data;
+			//Branch *data = new Branch(temp->data);
+			return &temp->data;// data;
 		}
 		temp = temp->next;
 	}

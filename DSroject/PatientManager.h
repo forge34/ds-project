@@ -54,12 +54,12 @@ Patient* PatientManager::search_by_name(string name) {
 
 	while (temp != NULL) {
         if (temp->data.get_name() == name) {
-            Patient* data = new Patient(temp->data);
+            //Patient* data = new Patient(temp->data);
 
-            return data;
+            return &temp->data;
         }else
             temp = temp->next;
 	}
 
-    return NULL;
+    return nullptr;
 }

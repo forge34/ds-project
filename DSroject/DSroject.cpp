@@ -47,7 +47,190 @@ void main_logic1() {
 
 }
 
+void main_logic2()
+{
+	int number;
+
+	DoctorManager dm;
+	PatientManager pm;
+	BranchManager bm;
+	bool flag = false;
+
+	while (flag != true)
+	{
+		cout << "List : " << endl;
+		cout << "Add & Update Menu :\n1 : Add Doctor\n2 : Add Patient\n3 : Add Hospital Branch\n4 : Update Patient Information\n";
+		cout << "Remove Menu :\n5 : Remove Doctor \n6 : Remove Patient \n7 : Remove Hospital Branch \n";
+		cout << "Search Menu :\n8 : Search Doctor by ID \n9 : Search Patient by ID \n10 : Search Hospital Branch by ID";
+		cout << "\nDisplay Menu : \n11 : Display Doctors \n12 : Display Pateints \n13 : Display Branchs\n14 : Exit\n";
+		cout << "Enter number to choose from the list : ";
+
+		cin >> number;
+		if (number == 1)
+		{
+			string info;
+
+			Doctor d;
+			cout << "Enter Doctor's name : ";
+			cin >> info;
+			d.set_name(info);
+			cout << "Enter Doctor's ID : ";
+			cin >> info;
+			d.set_id(info);
+			cout << "Enter Doctor's specialization : ";
+			cin >> info;
+			d.set_spec(info);
+			cout << "Enter Doctor's branch : ";
+			cin >> info;
+			d.set_branch(info);
+			dm.insert_first(d);
+		}
+		else if (number == 2)
+		{
+			Patient p;
+			string info;
+
+			cout << "Enter Patient's name : ";
+			cin >> info;
+			p.set_name(info);
+			cout << "Enter Patient's id : ";
+			cin >> info;
+			p.set_id(info);
+			cout << "Enter Patient's address : ";
+			cin >> info;
+			p.set_address(info);
+		}
+		else if (number == 3)
+		{
+			Branch b;
+			string info;
+
+			cout << "Enter Branch name : ";
+			cin >> info;
+			b.set_name(info);
+			cout << "Enter Branch id : ";
+			cin >> info;
+			b.set_id(info);
+			cout << "Enter Branch location : ";
+			cin >> info;
+			b.set_Location(info);
+		}
+		else if (number == 6)
+		{
+			try
+			{
+				string info;
+
+				cout << "Enter Patient id to remove : ";
+				cin >> info;
+				pm.remove_patient(info);
+			}
+			catch (...)
+			{
+				cout << "Error ! " << endl;
+			}
+		}
+		else if (number == 7)
+		{
+			try
+			{
+				string info;
+
+				cout << "Enter Branch id to remove : ";
+				cin >> info;
+				bm.remove_branch(info);
+			}
+			catch (...)
+			{
+				cout << "Error ! " << endl;
+			}
+		}
+		else if (number == 5)
+		{
+			try
+			{
+				string info;
+
+				cout << "Enter Doctor id to remove : ";
+				cin >> info;
+				dm.remove_doctor(info);
+			}
+			catch (...)
+			{
+				cout << "Error ! " << endl;
+			}
+		}
+		else if (number == 8)
+		{
+		}
+		else if (number == 9)
+		{
+			try
+			{
+				string info;
+
+				cout << "Enter patient id to search : ";
+				cin >> info;
+				pm.search_by_name(info);
+			}
+			catch (...)
+			{
+				cout << "Error ! " << endl;
+			}
+		}
+		else if (number == 10)
+		{
+			try
+			{
+				string info;
+
+				cout << "Enter branch id to search : ";
+				cin >> info;
+				bm.search_by_id(info);
+			}
+			catch (...)
+			{
+				cout << "Error ! " << endl;
+			}
+		}
+		else if (number == 11)
+		{
+			try
+			{
+				dm.display_doctors();
+			}
+			catch (...)
+			{
+				cout << "Error ! " << endl;
+			}
+		}
+	else if (number == 14)
+		{
+			cout << "Exited !";
+			flag = true;
+			return;
+		}
+		else
+		{
+			cout << "Invalid input ! " << endl;
+			return;
+		}
+	}
+}
+
+
 int main()
 {
-	main_logic1();
+	//main_logic1();
+	//main_logic2();
+
+	PatientManager bm;
+	Patient b1;
+
+	b1.set_id("D-4");
+	b1.set_name("Grand cair");
+
+	bm.insert_first(b1);
+
+	cout << (bm.search_by_name("Grand cairo"));
 }
