@@ -44,6 +44,10 @@ void main_logic1() {
 	b1.doctors->display_doctors();
 	b1.display_appointments();
 
+	Patient updated_patient;
+	updated_patient.set_id("P-1");
+	updated_patient.set_name("Not ahmed");
+	b1.patients->update_patient(p1.get_id(), updated_patient);
 
 }
 
