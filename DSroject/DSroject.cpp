@@ -223,14 +223,4 @@ int main()
 {
 	//main_logic1();
 	//main_logic2();
-
-	PatientManager bm;
-	Patient b1;
-
-	b1.set_id("D-4");
-	b1.set_name("Grand cair");
-
-	bm.insert_first(b1);
-
-	cout << (bm.search_by_name("Grand cairo"));
 }
